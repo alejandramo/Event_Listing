@@ -5,7 +5,23 @@
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "tachyons-border-radius": "^5.1.3",
+    "tachyons-box-sizing": "^3.2.2",
+    "tachyons-display": "^5.0.5",
+    "tachyons-font-weight": "^5.0.5",
+    "tachyons-heights": "^6.1.4",
+    "tachyons-hovers": "^2.5.2",
+    "tachyons-letter-spacing": "^3.0.5",
+    "tachyons-links": "^3.0.11",
+    "tachyons-position": "^6.0.7",
+    "tachyons-skins": "^4.1.1",
+    "tachyons-spacing": "^6.0.5",
+    "tachyons-text-align": "^3.1.0",
+    "tachyons-text-transform": "^4.0.6",
+    "tachyons-type-scale": "^6.1.1",
+    "tachyons-vertical-align": "^4.0.6",
+    "tachyons-widths": "^5.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
