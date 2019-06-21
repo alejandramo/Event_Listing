@@ -1,7 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
 
 import Navigation from './Components/Navigation/Navigation.jsx';
+import Search from './Components/Search/Search';
 import CardEvent from './Components/CardEvent/CardEvent';
 import Footer from './Components/Footer/Footer';
 
@@ -10,8 +10,10 @@ function App() {
   return (
     <div className="App">
         <Navigation/>
+        <Search/>
         <CardEvent/>
-        <Footer/>>
+        {/*<Map/> */}
+        <Footer/>
   
     </div>
   );

@@ -1,0 +1,127 @@
+/* Contenedor de eventos */
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(10, 10, 10,05);
+  }
+  
+  .flex-container > div {
+    background-color: #686161;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(194, 9, 9, 0.753);
+    border-radius: 5%;
+    width: 350px;
+    height: 550px;
+    margin: 20px;
+    margin-left: 10%;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+  }
+
+  .category_id{
+    font-size: 10px;
+    color: rgb(150, 196, 24);
+    display: inline-flex;
+
+}
+
+  .name_event{
+      font-size: 10px;
+      color: antiquewhite;
+      display: inline;
+      font-family: 'Comfortaa', cursive;
+      font-size: 16px;
+  }
+
+
+ .img_event {
+    font-size: 10px;
+    color: antiquewhite;
+    background-color: rgb(197, 54, 54);
+    position:relative;
+    display: block;
+    align-self: center;
+    width: 100%;
+    height: 150px;
+}
+
+
+.desc_event {
+    font-size: 10px;
+    color: antiquewhite;
+    height: 170px;
+}
+
+
+
+ /* BOTONES DE EVENTOS*/
+
+ .button{
+    line-height: 1;
+    display: inline-block;
+    height: 6px;
+}
+
+  .button1, .button1:visited {
+    background-color: rgb(76, 175, 162);
+    border: none;
+    color: white;
+    padding: 1px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 1px 2px;
+    cursor: pointer;
+  }
+
+ .button1:hover, .button1:active {
+    background-color: red;
+  }
+
+
+  .button2, .button2:visited {
+    background-color: rgb(175, 120, 76);
+    border: none;
+    color: white;
+    padding: 1px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 1px 2px;
+    cursor: pointer;
+  }
+
+ .button2:hover, .button2:active {
+    background-color: red;
+  }
+
+
+  .button3, .button3:visited {
+    background-color: rgb(168, 175, 76);
+    border: none;
+    color: white;
+    padding: 1px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 1px 2px;
+    cursor: pointer;
+  }
+
+ .button3:hover, .button3:active {
+    background-color: red;
+  }
+
+  .botones{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 10px;
+        color: antiquewhite;
+        align-content: space-between;
+        padding: 5%;
+  }
+
