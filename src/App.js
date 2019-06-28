@@ -1,9 +1,12 @@
 import React from 'react';
 
+
 import Navigation from './Components/Navigation/Navigation.jsx';
 import Search from './Components/Search/Search';
 import CardEvent from './Components/CardEvent/CardEvent';
 import Footer from './Components/Footer/Footer';
+import CategoriasProvider from './Components/Categories/Categories';
+import EventosEnlistados from './Components/Eventos/Eventos'
 
 import './App.css';
 import SignIn from './Components/SignIn/SignIn.jsx';
@@ -12,8 +15,15 @@ function App() {
   return (
     <div className="App">
         <Navigation/>
-        <LogIn/>
+        <EventosEnlistados>
+        <CategoriasProvider>
+        <div className = "uk-container">
         <Search/>
+        </div>
+        </CategoriasProvider>
+        </EventosEnlistados>
+        <LogIn/> 
+    
         <SignIn/>
         <CardEvent/>
         {/*<Map/> */}
