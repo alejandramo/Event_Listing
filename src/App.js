@@ -16,19 +16,20 @@ function App() {
     <div className="App">
         <Navigation/>
         <EventosEnlistados>
-        <CategoriasProvider>
-        <div className = "uk-container">
-        <Search/>
-        <ListaEventos/>
-        </div>
-        </CategoriasProvider>
+          <CategoriasProvider>
+            <div className = "uk-container">
+            <Search/>
+            <ListaEventos/>
+            </div>
+          </CategoriasProvider>
         </EventosEnlistados>
-        <LogIn/> 
+        
+        {/*<LogIn/> 
     
         <SignIn/>
         <CardEvent/>
-        {/*<Map/> */}
-        <Footer/>
+        <Map/> 
+        <Footer/>*/}
   
     </div>
   );

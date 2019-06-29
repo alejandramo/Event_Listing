@@ -7,14 +7,16 @@ export const EventosConsumer = EventosContext.Consumer;
 
 class EventosEnlistados extends Component {
     token= 'JQR7JFELI4NJC25IYGKG';
-    orden = 'date';
+    ordenar = 'date';
     
     state = {
         eventos : []
     }
 
-    encuentraEventos =async (buscar) =>{
-        let url = `https://www.eventbriteapi.com/v3/events/search/?q=${buscar.nombre}&categories=${buscar.categorias}&sort_by=${this.orden}&token=${this.token}&locale=es_ES`;
+    encuentraEventos =async (busqueda) =>{
+        let url = `https://www.eventbriteapi.com/v3/events/search/?q=${busqueda.nombre}&
+        categories=${busqueda.categoria}&sort_by=${this.ordenar}&
+        token=${this.token}&locale=es_ES`;
 
         const eventos = await axios(url);
         this.setState({

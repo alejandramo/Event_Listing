@@ -2,7 +2,8 @@ import React from 'react';
 
 const Evento = ({evento}) => {
 
-let{ text} = evento.description;
+let{text} = evento.description;
+
 if(text){
     if(text.length > 250){
         text = text.substr(0, 250);
@@ -13,16 +14,15 @@ if(text){
 
     return (
         <div>
-
-        
         <div className= 'uk-card uk-card-default'>
             <div className='uk-card-media-top'>
-                {evento.logo}
-                ? <img src= {evento.logo.url} alt={evento.name} />
-                : null }
+                {evento.logo
+                    ? <img src= {evento.logo.url} alt={evento.name} />
+                    : null }
             </div>
             <div className='uk-card-body'>
                 <h3 className= 'uk-card-title'>{evento.name.text}</h3>
+                {text}
             </div>
             <div className='uk-card-footer'>
                 <a target= '_blank' rel= 'noopener noreferrer'

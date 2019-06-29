@@ -5,79 +5,83 @@ import {EventosConsumer} from '../Eventos/Eventos';
 import './Search.css';
 
 class Search extends Component {
-   state = {
-     nombre: '',
-     categoria: '',
-   } 
+  state = {
+    nombre: '',
+    categoria: '',
+  } 
 
-   infoEvento = e => {
-     this.setState({
-       [e.target.name] : e.target.value
-     })
-   }
+  infoEvento = e => {
+    this.setState({
+      [e.target.name] : e.target.value
+    })
+  }
 
-
-   render (){
-     return (
-       <EventosConsumer>
-         {(value) => {
-           console.log(value)
-
-           return(
+  render(){
+    return(
+      <EventosConsumer>
+        {(value) => {
+          console.log(value)
        
-        <form onSubmit={(e) =>{
-          e.preventDefault();
-          value.encuentraEventos(this.state)
-        }}>
-          <fieldset className='uk-fielset uk-margin'>
-            <legend className='uk-legend uk-text-center'>
-              Busca por nombre o categoría
-            </legend>
-        </fieldset>
-        <div className= 'uk-column-1-3@m uk-margin='>
-          <div className= 'uk-margin' uk-margin='true'>
-            <input 
-              name= 'nombre'
-              className='uk-input'
-              type='text'
-              placeholder= 'Evento o ciudad'
-              onChange={this.infoEvento}
-            />
-          </div>
-          <div className= 'uk-margin' uk-margin='true'>
-            <select
-            className= 'uk-select'
-            name= 'categoria'
-            onChange={this.infoEvento}
+          return(
+            <form 
+              onSubmit={(e) =>{
+                e.preventDefault();
+                value.encuentraEventos(this.state)
+              }}
             >
-              <option value =""> Categoría</option>
-              <CategoriasConsumer>
-                {(value)=>{
-                  return(
-                    value.categorias.map(categorias => (
-                      <option key={categorias.id} value={categorias.id}
-                      data-uk-form-select>
-                        {categorias.name_localized}
-                      </option>
-                    )))
+              <fieldset className='uk-fielset uk-margin'>
+                <legend className='uk-legend uk-text-center'>
+                  Busca por nombre o categoría
+                </legend>
+              </fieldset>
+               
+              <div className= 'uk-column-1-3@m uk-margin='>
+                <div className= 'uk-margin' uk-margin='true'>     
+                  <input 
+                    name= 'nombre'
+                    className='uk-input'
+                    type='text'
+                    placeholder= 'Evento o ciudad'
+                    onChange={this.infoEvento}
+                  />
+                </div>
 
-                }}
-              </CategoriasConsumer>
+                <div className='uk-margin' uk-margin='true'>
+                  <select
+                    className='uk-select'
+                    name='categoria'
+                    onChange={this.infoEvento}
+                  >
+                    <option value =""> Categoría</option>
+                      <CategoriasConsumer>
+                        {(value)=>{
+                          return(
+                            value.categorias.map(categoria => (
+                              <option key={categoria.id} value={categoria.id}
+                                data-uk-form-select>
+                                {categoria.name_localized}
+                              </option>
+                            ))
+                          )
+                        }}
+                      </CategoriasConsumer>
+                  </select>
+                </div>  
+                <div>
+                  <input type= "sumbmit" 
+                    className= 'uk-button uk-button-danger'
+                    value = 'Busca tu evento' />
+                </div>
+              </div>
+            </form>
+          )
+        }}
+            </EventosConsumer>
+          );
+        }
+      }
 
-            </select>
-          </div>
-          <div>
-            <input type= "sumbmit" className= 'uk-button uk-button-success'
-            value = 'Busca tu evento' />
-          </div>
 
-        </div>
-        </form>
-        )
-      }}
-        </EventosConsumer>
-     );
-   }
-}
+
 
 export default Search;
