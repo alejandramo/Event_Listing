@@ -1,45 +1,43 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 
-const CategoriasContext = React.createContext();
+const CategoriasDatos = React.createContext();
+export const CategoriasConst = CategoriasDatos.Consumer;
 
-export const CategoriasConsumer = CategoriasContext.Consumer;
 
-class CategoriasProvider extends Component {
-
-    token= 'JQR7JFELI4NJC25IYGKG';
+class CategoriasData extends Component  {
     
+    token = 'SSS2LNZUTYCBN77NGD7E';
     state = {
-        categorias: []
+        categorias : []
     }
-
-    componentDidMount(){
-        this.obtenerCategorias();
-    }
-
-    obtenerCategorias = async()=> {
-
-        let url = `https://www.eventbriteapi.com/v3/categories/?token=$
-        {this.token}&locale=es_ES`;    
     
-        let categorias = await axios.get(url);
+    componentDidMount(){
+        this.mostrarCategorias();
+    }
 
-        this.setState({
-            categorias : categorias.data.categories
+    mostrarCategorias = async () => {
+        let url = `https://www.eventbriteapi.com/v3/categories/?token=${this.token}&locale=es_ES`;
+        
+        let categorias = await axios.get(url);
+        this.setState ({
+    
+            categorias: categorias.data.categories
         })
     }
 
-    render(){
+    render (){
         return (
-            <CategoriasContext.Provider
+            <CategoriasDatos.Provider
                 value={{
-                    categorias: this.state.categorias,
-                }} 
+                    categorias : this.state.categorias
+                }}
             >
                 {this.props.children}
-            </CategoriasContext.Provider>
-        );
-    }    
-}
+            </CategoriasDatos.Provider>
 
-export default CategoriasProvider;
+
+        );
+    }
+}
+export default CategoriasData;

@@ -1,35 +1,31 @@
 import React from 'react';
 
 import Navigation from './Components/Navigation/Navigation.jsx';
-import Search from './Components/Search/Search';
-import CardEvent from './Components/CardEvent/CardEvent';
-import Footer from './Components/Footer/Footer';
+
+
+//import Footer from './Components/Footer/Footer';
 import CategoriasProvider from './Components/Categories/Categories';
-import EventosEnlistados from './Components/Eventos/Eventos';
+import EventosProvider from './Components/Events/Events';
 import ListaEventos from './Components/ListaEventos/ListaEventos';
+import Formulario from './Components/Form/Form'
+import Footer from './Components/Footer/Footer';
 
 import './App.css';
-import SignIn from './Components/SignIn/SignIn.jsx';
-import LogIn from './Components/LogIn/LogIn.jsx';
+
 function App() {
   return (
     <div className="App">
-        <Navigation/>
-        <EventosEnlistados>
+        <EventosProvider>
           <CategoriasProvider>
-            <div className = "uk-container">
-            <Search/>
-            <ListaEventos/>
+            <Navigation/>
+            <div className='uk-container'>
+              <Formulario/>
+              <ListaEventos/>
             </div>
           </CategoriasProvider>
-        </EventosEnlistados>
+          </EventosProvider>
         
-        {/*<LogIn/> 
-    
-        <SignIn/>
-        <CardEvent/>
-        <Map/> 
-        <Footer/>*/}
+        <Footer/>
   
     </div>
   );
