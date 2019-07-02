@@ -13,6 +13,7 @@ header{
 
         li {
           float: left;
+          padding: 2em;
         }   
             li:last-child {
               border-right: none;
@@ -28,6 +29,6 @@ header{
               background-color: #111;
             }   
             .active img {
-              height: 90px;
+              height: 120px;
               padding: 20px;
             }

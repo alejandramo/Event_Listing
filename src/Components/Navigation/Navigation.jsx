@@ -14,8 +14,9 @@ const Navigation =() => {
                       <div className="Tilt-inner"><img src={LogoBeAt} alt="Logo_Home" /></div>
                     </Tilt>
                   </a>
-                </li>            
-              <li style={{float: 'right'}}><a href="mapa.html">Mapa</a></li>
+                </li> 
+              <li style={{float: 'center', margin:'3em'}}> Encuentra tu evento</li>           
+              <li style={{float: 'right', marginRight:'4em'}}><a href="mapa.html">Mapa</a></li>
             </ul>              
           </header>   
         </div>
