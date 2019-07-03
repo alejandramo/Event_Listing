@@ -42,11 +42,12 @@ h1 {
 }
 .uk-button {
   width: 100%;
-  background-color: #e9ec3a;
+  background-color: #353568;
+  color: white;
 }
 
 .uk-card-default{
-  background-color: #c0bdbd;
+  background-color: #ecebeb;
   box-shadow: 10px 10px 5px rgba(29, 29, 29, 0.582);
   border-radius: 20px;
   margin-top: -5em;
@@ -60,10 +61,15 @@ h1 {
 }
 
 .uk-input, .uk-select{
-  color: rgb(134, 134, 134);
-  background-color: #b7b90f;
+  color: rgb(255, 255, 255);
+  background-color: #353568be;
+
 }
 
 .box_padding{
   padding-bottom: 10em;
+}
+
+.uk-card-footer b {
+  background-color: aqua;
 }

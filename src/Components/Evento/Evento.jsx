@@ -30,8 +30,8 @@ const Evento = ({evento}) => {
                         </a>
                 </div>
 
-                <div className='uk-card-footer'>
-                        <a target= '_blank' rel='noopener noreferrer' href={evento.url} className='uk-button uk-button-secondary'>
+                <div className='uk-card-footer b'>
+                        <a target= '_blank' rel='noopener noreferrer' href='https://calendar.google.com/calendar/' className='uk-button uk-button-secondary'>
                             Agregar a mi calendario
                         </a>
                 </div>
